@@ -11,5 +11,6 @@ COPY etc/server.cer /var/lib/jetty/etc/server.cer
 COPY target/cas.war /var/lib/jetty/webapps/cas.war
 COPY etc/jetty/jetty-https.xml /usr/local/jetty/etc/jetty-https.xml
 COPY etc/jetty/jetty-ssl.xml /usr/local/jetty/etc/jetty-ssl.xml
+COPY etc/jetty/jetty-ssl-context.xml /usr/local/jetty/etc/jetty-ssl-context.xml
 COPY etc/jetty/jetty.xml /usr/local/jetty/etc/jetty.xml
 
