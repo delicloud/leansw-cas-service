@@ -34,23 +34,23 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <AsyncLogger  name="org.jasig" level="info" additivity="false" includeLocation="true">
+        <AsyncLogger  name="org.jasig" level="trace" additivity="false" includeLocation="true">
             <AppenderRef ref="console"/>
             <AppenderRef ref="file"/>
         </AsyncLogger>
-        <AsyncLogger  name="org.springframework" level="warn" />
-        <AsyncLogger name="org.springframework.webflow" level="warn" />
-        <AsyncLogger name="org.springframework.web" level="warn" />
+        <AsyncLogger  name="org.springframework" level="trace" />
+        <AsyncLogger name="org.springframework.webflow" level="trace" />
+        <AsyncLogger name="org.springframework.web" level="trace" />
         <Logger name="org.pac4j" level="warn" />
 
-        <AsyncLogger name="perfStatsLogger" level="info" additivity="false" includeLocation="true">
+        <AsyncLogger name="perfStatsLogger" level="trace" additivity="false" includeLocation="true">
             <AppenderRef ref="perfFileAppender"/>
         </AsyncLogger>
 
-        <AsyncLogger name="org.jasig.cas.web.flow" level="info" additivity="true" includeLocation="true">
+        <AsyncLogger name="org.jasig.cas.web.flow" level="trace" additivity="true" includeLocation="true">
             <AppenderRef ref="file"/>
         </AsyncLogger>
-        <AsyncLogger name="org.jasig.inspektr.audit.support" level="info" includeLocation="true">
+        <AsyncLogger name="org.jasig.inspektr.audit.support" level="trace" includeLocation="true">
             <AppenderRef ref="auditlogfile"/>
             <AppenderRef ref="file"/>
         </AsyncLogger>
