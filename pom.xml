@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jasig.cas</groupId>
     <artifactId>cas-overlay</artifactId>
-    <packaging>war</packaging>
+    <packaging>giar</packaging>
     <version>1.0</version>
 
     <build>
@@ -47,7 +47,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${maven-jetty-plugin.version}</version>
                 <configuration>
-                    <jettyXml>${basedir}/etc/jetty/jetty.xml,${basedir}/etc/jetty/jetty-ssl.xml,${basedir}/etc/jetty/jetty-https.xml</jettyXml>
+                    <jettyXml>${basedir}/etc/jetty/jetty.xml,${basedir}/etc/jetty/jetty-http.xml,${basedir}/etc/jetty/jetty-ssl.xml,${basedir}/etc/jetty/jetty-https.xml</jettyXml>
                     <systemProperties>
                         <systemProperty>
                             <name>org.eclipse.jetty.annotations.maxWait</name>
