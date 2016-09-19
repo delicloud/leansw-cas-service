@@ -4,6 +4,6 @@
   "clientSecret": "clientSecret",
   "bypassApprovalPrompt": false,
   "serviceId" : "^(http|https|imaps)://.*",
-  "name" : "HTTPS and IMAPS",
+  "name" : "Deliflow OAuth Login",
   "id" : 1000008
 }
