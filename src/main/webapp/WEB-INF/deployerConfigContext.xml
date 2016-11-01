@@ -21,7 +21,7 @@
 
     <util:map id="authenticationHandlersResolvers">
         <!--  ldap -->
-        <entry key-ref="ldapAuthenticationHandler" value-ref="primaryPrincipalResolver" />
+        <!-- <entry key-ref="ldapAuthenticationHandler" value-ref="primaryPrincipalResolver" />  -->
         <entry key-ref="proxyAuthenticationHandler" value-ref="proxyPrincipalResolver" />
         <entry key-ref="primaryAuthenticationHandler" value-ref="primaryPrincipalResolver" />
     </util:map>
@@ -79,12 +79,16 @@
     <alias name="defaultAuthenticationTransactionManager" alias="authenticationTransactionManager" />
     <alias name="defaultPrincipalElectionStrategy" alias="principalElectionStrategy" />
     <alias name="tgcCipherExecutor" alias="defaultCookieCipherExecutor" />
-    <!-- ldap -->
+
+
+
+    <!-- ldap
     <bean id="ldapAuthenticationHandler"
           class="org.jasig.cas.authentication.LdapAuthenticationHandler"
           p:principalIdAttribute="uid"
           c:authenticator-ref="authenticator" />
-    <!-- ldap  -->
+          -->
+    <!-- ldap
     <ldaptive:bind-search-authenticator id="authenticator"
                                         ldapUrl="${ldap.url}"
                                         baseDn="${ldap.baseDn}"
@@ -107,5 +111,5 @@
                                         subtreeSearch="${ldap.subtree.search:true}"
                                         useSSL="${ldap.use.ssl:false}"
     />
-
+-->
 </beans>
