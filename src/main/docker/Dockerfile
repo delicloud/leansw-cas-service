@@ -10,5 +10,5 @@ COPY cas.war /var/lib/jetty/webapps/cas.war
 COPY etc/change_domain_name.sh /
 RUN java -jar "$JETTY_HOME/start.jar" --add-to-startd=jmx,stats,https,ssl
 
-ENTRYPOINT ["/change_domain_name.sh && /docker-entrypoint.sh"]
-CMD ["java","-jar","/usr/local/jetty/start.jar"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["bash", "-c", "/change_domain_name.sh; java -jar /usr/local/jetty/start.jar"]
