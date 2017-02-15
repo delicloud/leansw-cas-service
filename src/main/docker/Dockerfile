@@ -7,8 +7,4 @@ COPY etc/log4j2.xml /etc/cas/log4j2.xml
 COPY etc/thekeystore /var/lib/jetty/etc/keystore
 COPY etc/jetty/* /usr/local/jetty/etc/
 COPY cas.war /var/lib/jetty/webapps/cas.war
-COPY etc/change_domain_name.sh /
 RUN java -jar "$JETTY_HOME/start.jar" --add-to-startd=jmx,stats,https,ssl
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["bash", "-c", "/change_domain_name.sh; java -jar /usr/local/jetty/start.jar"]
