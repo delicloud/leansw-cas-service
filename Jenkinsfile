@@ -15,6 +15,7 @@ node {
     def dockerImage
     stage('PACKAGE') {
         sh "cp -R src/main/docker target/"
+        sh "cp -r etc target/"
         sh "cp target/*.war target/docker/"
         dockerImage = docker.build('deliflow/cas-service', 'target/docker')
     }
